@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "CS2 Trade History Helper",
+  "version": "1.0",
+  "description": "Automatically adds 'Inspect' buttons to items in Steam trade history.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["*://steamcommunity.com/id/*/tradehistory*"],
+  "content_scripts": [
+    {
+      "matches": ["*://steamcommunity.com/id/*/tradehistory*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
